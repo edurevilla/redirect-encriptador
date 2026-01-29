@@ -1,22 +1,35 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Redirigiendo...</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script>
-      const userAgent = navigator.userAgent || navigator.vendor || window.opera;
-
-      if (/android/i.test(userAgent)) {
-        window.location.href = "https://play.google.com/store/apps/details?id=com.tudominio.encriptador&pcampaignid=web_share";
-      } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-        window.location.href = "https://apps.apple.com/us/app/encriptador/id6744336564";
-      } else {
-        window.location.href = "https://reviblog.net/encryptor-protect-your-messages-with-secure-encryption/";
-      }
-    </script>
-  </head>
-  <body>
-    <p>Redirigiendo…</p>
-  </body>
-</html>
+ <!DOCTYPE html>                                                               
+  <html>                                                                        
+    <head>                                                                      
+      <meta charset="UTF-8">                                                    
+      <title>Redirigiendo...</title>                                            
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+      <script>                                                                  
+        const userAgent = navigator.userAgent || navigator.vendor ||            
+  window.opera;                                                                 
+        const platform = navigator.platform || '';                              
+                                                                                
+        if (/android/i.test(userAgent)) {                                       
+          // Android                                                            
+          window.location.href =                                                
+  "https://play.google.com/store/apps/details?id=com.edurevilla.encriptador";   
+        } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {    
+          // iOS                                                                
+          window.location.href =                                                
+  "https://apps.apple.com/app/encripta/id6740512466";                           
+        } else if (/Macintosh|MacIntel|MacPPC|Mac68K/.test(platform) || /Mac OS 
+  X/.test(userAgent)) {                                                         
+          // macOS                                                              
+          window.location.href =                                                
+  "https://apps.apple.com/us/app/encripta/id6758046112?mt=12";                  
+        } else {                                                                
+          // Fallback a landing page                                            
+          window.location.href = "https://reviblog.net/apps/encriptador-protege-
+  tus-mensajes-con-encriptacion-segura/";                                       
+        }                                                                       
+      </script>                                                                 
+    </head>                                                                     
+    <body>                                                                      
+      <p>Redirigiendo…</p>                                                      
+    </body>                                                                     
+  </html>                 
